@@ -22,12 +22,14 @@ namespace VolumeConverter
             comboBoxInit();
         }
 
+        //adds all volume options to the combo boxes.
         private void comboBoxInit()
         {
             string[] volumeList = {"Liter", "Cubic Foot", "Gallon", "Cup", "Teaspoon"};
             for (int i = 0; i < volumeList.Length; i++)
             {
                 comboBox1.Items.Add(volumeList[i]);
+                comboBox2.Items.Add(volumeList[i]);
             }
         }
         private void label1_Click(object sender, EventArgs e)
