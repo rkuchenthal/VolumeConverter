@@ -24,7 +24,7 @@ namespace VolumeConverter
 
         private void comboBoxInit()
         {
-            string[] volumeList = { "Liter", "Cubic Foot", "Gallon", "Cup", "Teaspoon" };
+            string[] volumeList = {"Liter", "Cubic Foot", "Gallon", "Cup", "Teaspoon"};
             for (int i = 0; i < volumeList.Length; i++)
             {
                 comboBox1.Items.Add(volumeList[i]);
