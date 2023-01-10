@@ -12,11 +12,11 @@ namespace VolumeConverter
 {
     public partial class Form1 : Form
     {
-        string[] volumeList = { "Liter", "Cubic Foot", "Gallon", "Cup", "Teaspoon" };
+        private string[] volumeList = { "Liter", "Gallon", "Cup", "Teaspoon" };
         public Form1()
         {
             InitializeComponent();
-            comboBox2.Enabled= false;
+            textBox2.Enabled= false;
             comboBoxInit();
         }
 
@@ -41,6 +41,24 @@ namespace VolumeConverter
 
         private void label5_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string volFrom = comboBox1.SelectedItem.ToString();
+            string volTo = comboBox2.SelectedItem.ToString();
+            double convFrom = Convert.ToInt32(textBox1.Text);
+            double convTo;
+
+            //liters to gallons
+            if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[1]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * .264172);
+            }
+                
+
+
 
         }
     }
