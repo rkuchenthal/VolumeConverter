@@ -38,10 +38,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.form1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.form1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.form1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.form1BindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -126,17 +126,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(202, 180);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 31);
+            this.label3.Size = new System.Drawing.Size(111, 31);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Volume 2";
-            // 
-            // form1BindingSource
-            // 
-            this.form1BindingSource.DataSource = typeof(VolumeConverter.Form1);
-            // 
-            // form1BindingSource1
-            // 
-            this.form1BindingSource1.DataSource = typeof(VolumeConverter.Form1);
+            this.label3.Text = "Answer";
             // 
             // label4
             // 
@@ -158,6 +150,14 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Converting To";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // form1BindingSource
+            // 
+            this.form1BindingSource.DataSource = typeof(VolumeConverter.Form1);
+            // 
+            // form1BindingSource1
+            // 
+            this.form1BindingSource1.DataSource = typeof(VolumeConverter.Form1);
             // 
             // Form1
             // 
