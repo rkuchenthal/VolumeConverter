@@ -12,7 +12,7 @@ namespace VolumeConverter
 {
     public partial class Form1 : Form
     {
-        private string[] volumeList = { "Liter", "Gallon", "Cup", "Teaspoon" };
+        private string[] volumeList = { "Liter", "Gallon", "Cup" };
         public Form1()
         {
             InitializeComponent();
