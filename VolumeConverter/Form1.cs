@@ -12,16 +12,17 @@ namespace VolumeConverter
 {
     public partial class Form1 : Form
     {
+        string[] volumeList = { "Liter", "Cubic Foot", "Gallon", "Cup", "Teaspoon" };
         public Form1()
         {
             InitializeComponent();
+            comboBox2.Enabled= false;
             comboBoxInit();
         }
 
         //adds all volume options to the combo boxes.
         private void comboBoxInit()
         {
-            string[] volumeList = {"Liter", "Cubic Foot", "Gallon", "Cup", "Teaspoon"};
             for (int i = 0; i < volumeList.Length; i++)
             {
                 comboBox1.Items.Add(volumeList[i]);
