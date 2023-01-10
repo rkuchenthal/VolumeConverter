@@ -49,40 +49,43 @@ namespace VolumeConverter
             
     private void button1_Click(object sender, EventArgs e)
         {
+            //check to make sure the text boxes arent empty
+            if (String.IsNullOrEmpty(textBox1.Text)) { return; }
+
             string volFrom = comboBox1.SelectedItem.ToString();
             string volTo = comboBox2.SelectedItem.ToString();
             double convFrom = Convert.ToInt32(textBox1.Text);
-            
-                //liters to gallons
-                if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[1]))
-                {
-                    textBox2.Text = Convert.ToString(convFrom * .264172);
-                }
-                //gallons to liters
-                else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[0]))
-                {
-                    textBox2.Text = Convert.ToString(convFrom * 3.785411784);
-                }
-                //liters to cups
-                else if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[2]))
-                {
-                    textBox2.Text = Convert.ToString(convFrom * 4.2267528377);
-                }
-                //gallons to cups
-                else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[2]))
-                {
-                    textBox2.Text = Convert.ToString(convFrom * 16);
-                }
-                //cups to liters
-                else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[0]))
-                {
-                    textBox2.Text = Convert.ToString(convFrom * 0.2365882365);
-                }
-                //cups to gallons
-                else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[1]))
-                {
-                    textBox2.Text = Convert.ToString(convFrom * 0.0625);
-                }
+
+            //liters to gallons
+            if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[1]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * .264172);
+            }
+            //gallons to liters
+            else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[0]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 3.785411784);
+            }
+            //liters to cups
+            else if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[2]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 4.2267528377);
+            }
+            //gallons to cups
+            else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[2]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 16);
+            }
+            //cups to liters
+            else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[0]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 0.2365882365);
+            }
+            //cups to gallons
+            else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[1]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 0.0625);
+            }
 
             
 
