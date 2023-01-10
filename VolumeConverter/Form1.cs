@@ -31,31 +31,19 @@ namespace VolumeConverter
             comboBox1.Text = "Original Unit";
             comboBox2.Text = "New Unit";
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-        
-            
+       
     private void button1_Click(object sender, EventArgs e)
         {
-            //check to make sure the text boxes arent empty
+            //check to make sure the text boxes arent empty,
+            //if so not allowing the program to continue
             if (String.IsNullOrEmpty(textBox1.Text)) { return; }
 
+            //extract all text from comboboxes and textboxes
             string volFrom = comboBox1.SelectedItem.ToString();
             string volTo = comboBox2.SelectedItem.ToString();
             double convFrom = Convert.ToInt32(textBox1.Text);
 
+            //CONVERSIONS
             //liters to gallons
             if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[1]))
             {
@@ -86,9 +74,6 @@ namespace VolumeConverter
             {
                 textBox2.Text = Convert.ToString(convFrom * 0.0625);
             }
-
-            
-
 
         }
 

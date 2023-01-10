@@ -92,7 +92,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 4;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -112,7 +111,6 @@
             this.label1.Size = new System.Drawing.Size(621, 39);
             this.label1.TabIndex = 6;
             this.label1.Text = "Convert From One Volume to Another";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -153,7 +151,6 @@
             this.label5.Size = new System.Drawing.Size(149, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Converting To";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // form1BindingSource
             // 
