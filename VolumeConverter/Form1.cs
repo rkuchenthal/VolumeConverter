@@ -16,7 +16,7 @@ namespace VolumeConverter
         public Form1()
         {
             InitializeComponent();
-            textBox2.Enabled= false;
+            answerVolTextBox.Enabled= false;
             comboBoxInit();
         }
 
@@ -25,64 +25,64 @@ namespace VolumeConverter
         {
             for (int i = 0; i < volumeList.Length; i++)
             {
-                comboBox1.Items.Add(volumeList[i]);
-                comboBox2.Items.Add(volumeList[i]);
+                convertingFromTextBox.Items.Add(volumeList[i]);
+                convertToDropDown.Items.Add(volumeList[i]);
             }
-            comboBox1.Text = "Original Unit";
-            comboBox2.Text = "New Unit";
+            convertingFromTextBox.Text = "Original Unit";
+            convertToDropDown.Text = "New Unit";
         }
        
     private void button1_Click(object sender, EventArgs e)
         {
             //check to make sure the text boxes arent empty,
             //if so not allowing the program to continue
-            if (String.IsNullOrEmpty(textBox1.Text)) { return; }
+            if (String.IsNullOrEmpty(initVolTextBox.Text)) { return; }
 
             //extract all text from comboboxes and textboxes
-            string volFrom = comboBox1.SelectedItem.ToString();
-            string volTo = comboBox2.SelectedItem.ToString();
-            double convFrom = Convert.ToInt32(textBox1.Text);
+            string volFrom = convertingFromTextBox.SelectedItem.ToString();
+            string volTo = convertToDropDown.SelectedItem.ToString();
+            double convFrom = Convert.ToInt32(initVolTextBox.Text);
 
             //CONVERSIONS
             //liters to gallons
             if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[1]))
             {
-                textBox2.Text = Convert.ToString(convFrom * .264172);
+                answerVolTextBox.Text = Convert.ToString(convFrom * .264172);
             }
             //gallons to liters
             else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[0]))
             {
-                textBox2.Text = Convert.ToString(convFrom * 3.785411784);
+                answerVolTextBox.Text = Convert.ToString(convFrom * 3.785411784);
             }
             //liters to cups
             else if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[2]))
             {
-                textBox2.Text = Convert.ToString(convFrom * 4.2267528377);
+                answerVolTextBox.Text = Convert.ToString(convFrom * 4.2267528377);
             }
             //gallons to cups
             else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[2]))
             {
-                textBox2.Text = Convert.ToString(convFrom * 16);
+                answerVolTextBox.Text = Convert.ToString(convFrom * 16);
             }
             //cups to liters
             else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[0]))
             {
-                textBox2.Text = Convert.ToString(convFrom * 0.2365882365);
+                answerVolTextBox.Text = Convert.ToString(convFrom * 0.2365882365);
             }
             //cups to gallons
             else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[1]))
             {
-                textBox2.Text = Convert.ToString(convFrom * 0.0625);
+                answerVolTextBox.Text = Convert.ToString(convFrom * 0.0625);
             }
 
         }
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            textBox1.Text = string.Empty;
-            textBox2.Text = string.Empty;
-            comboBox1.Text = "Original Unit";
-            comboBox2.Text = "New Unit";
+            initVolTextBox.Text = string.Empty;
+            answerVolTextBox.Text = string.Empty;
+            convertingFromTextBox.Text = "Original Unit";
+            convertToDropDown.Text = "New Unit";
         }
     }
 }
