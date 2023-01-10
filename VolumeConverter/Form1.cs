@@ -61,14 +61,26 @@ namespace VolumeConverter
             else if(volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[0]))
             {
                 textBox2.Text = Convert.ToString(convFrom * 3.785411784);
-            }//liters to cups
+            }
+            //liters to cups
             else if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[2]))
             {
                 textBox2.Text = Convert.ToString(convFrom * 4.2267528377);
-            }//gallons to cups
+            }
+            //gallons to cups
             else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[2]))
             {
                 textBox2.Text = Convert.ToString(convFrom * 16);
+            }
+            //cups to liters
+            else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[0]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 0.2365882365);
+            }
+            //cups to gallons
+            else if (volFrom.Equals(volumeList[2]) && volTo.Equals(volumeList[1]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 0.0625);
             }
 
 
