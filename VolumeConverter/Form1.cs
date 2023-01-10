@@ -52,8 +52,7 @@ namespace VolumeConverter
             string volFrom = comboBox1.SelectedItem.ToString();
             string volTo = comboBox2.SelectedItem.ToString();
             double convFrom = Convert.ToInt32(textBox1.Text);
-            if (e.Equals() == Keys.Enter)
-            {
+            
                 //liters to gallons
                 if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[1]))
                 {
@@ -85,7 +84,7 @@ namespace VolumeConverter
                     textBox2.Text = Convert.ToString(convFrom * 0.0625);
                 }
 
-            }
+            
 
 
         }
