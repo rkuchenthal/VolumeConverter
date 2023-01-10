@@ -28,6 +28,8 @@ namespace VolumeConverter
                 comboBox1.Items.Add(volumeList[i]);
                 comboBox2.Items.Add(volumeList[i]);
             }
+            comboBox1.Text = "Pick Unit";
+            comboBox2.Text = "Pick Unit";
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -56,10 +58,22 @@ namespace VolumeConverter
             {
                 textBox2.Text = Convert.ToString(convFrom * .264172);
             }
+            else if(volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[2]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 3.785411784);
+            }
                 
 
 
 
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = string.Empty;
+            textBox2.Text = string.Empty;
+            comboBox1.Text = "Pick Unit";
+            comboBox2.Text = "Pick Unit";
         }
     }
 }
