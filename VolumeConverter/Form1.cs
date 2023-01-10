@@ -12,10 +12,6 @@ namespace VolumeConverter
 {
     public partial class Form1 : Form
     {
-        
-        //List<string> volumeList = new List<string>();
-        //volumeList.add();
-
         public Form1()
         {
             InitializeComponent();
@@ -39,8 +35,12 @@ namespace VolumeConverter
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //comboBox1.Items.Insert;
             
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
