@@ -179,6 +179,9 @@
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnConvert);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(857, 396);
+            this.MinimumSize = new System.Drawing.Size(857, 396);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Volume Converter";
