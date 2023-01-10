@@ -28,8 +28,8 @@ namespace VolumeConverter
                 comboBox1.Items.Add(volumeList[i]);
                 comboBox2.Items.Add(volumeList[i]);
             }
-            comboBox1.Text = "Pick Unit";
-            comboBox2.Text = "Pick Unit";
+            comboBox1.Text = "Original Unit";
+            comboBox2.Text = "New Unit";
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -92,8 +92,8 @@ namespace VolumeConverter
         {
             textBox1.Text = string.Empty;
             textBox2.Text = string.Empty;
-            comboBox1.Text = "Pick Unit";
-            comboBox2.Text = "Pick Unit";
+            comboBox1.Text = "Original Unit";
+            comboBox2.Text = "New Unit";
         }
     }
 }
