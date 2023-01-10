@@ -51,18 +51,26 @@ namespace VolumeConverter
             string volFrom = comboBox1.SelectedItem.ToString();
             string volTo = comboBox2.SelectedItem.ToString();
             double convFrom = Convert.ToInt32(textBox1.Text);
-            double convTo;
 
             //liters to gallons
             if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[1]))
             {
                 textBox2.Text = Convert.ToString(convFrom * .264172);
             }
-            else if(volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[2]))
+            //gallons to liters
+            else if(volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[0]))
             {
                 textBox2.Text = Convert.ToString(convFrom * 3.785411784);
+            }//liters to cups
+            else if (volFrom.Equals(volumeList[0]) && volTo.Equals(volumeList[2]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 4.2267528377);
+            }//gallons to cups
+            else if (volFrom.Equals(volumeList[1]) && volTo.Equals(volumeList[2]))
+            {
+                textBox2.Text = Convert.ToString(convFrom * 16);
             }
-                
+
 
 
 
